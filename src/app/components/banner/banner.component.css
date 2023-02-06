@@ -1,0 +1,29 @@
+.row {
+    background-image: linear-gradient(to right,rgba(0, 123, 0, 0.5),rgba(255, 48, 49, 0.5)),
+                  url("../../../assets/banner7.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 100%,0 85%);
+    height:550px;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position-x: center;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    margin:0;
+}
+
+@media (max-width:500px){
+    .contenedor {
+        height:350px;
+
+    }    
+}
+.btn {
+    width:40px;
+    height: 40px;
+    background-image: url(../../../assets/usuario.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:0px;
+}

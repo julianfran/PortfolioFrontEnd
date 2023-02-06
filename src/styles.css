@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'bebasneue', 'arial', sans-serif;
+
+}
+@font-face {
+    font-family: bebasneue;
+    src: url(assets/fonts/BebasNeue-Regular.woff) format("woff"),
+         url(assets/fonts/BebasNeue-Regular.woff2) format("woff2");
+  }
+
+  @font-face {
+    font-family: FlightyRegular;
+    src: url(assets/fonts/FlightyRegular-vm7zA.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: GoldleafBold;
+    src: url(assets/fonts/GoldleafBoldPersonalUseBold-eZ4dO.ttf) format("truetype");
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vidaloka&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');

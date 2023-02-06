@@ -1,0 +1,40 @@
+.row {
+    padding: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 1.7em;
+    color: #ff3031;
+    font-family: "bebasneue";
+}
+h2 {
+    font-size: 3em;
+    color: #007b00;
+    font-family: "Poiret One";
+    font-weight: bold;
+}
+h3 {
+    color:#ff3031;
+    margin-top:15px;
+    /* text-shadow: 1px 1px 1px #212529 */
+}
+p {
+    font-size: 1.2em;
+}
+.centrado {
+    text-align: center;
+}
+.justificado {
+    text-align: justify;
+}
+
+#fotoDePerfil{
+    width: 80%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 2%;
+    margin:5px
+}

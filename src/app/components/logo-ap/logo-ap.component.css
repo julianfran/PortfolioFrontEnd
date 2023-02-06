@@ -1,0 +1,76 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row nowrap;
+    height: 90px;
+    padding: 0 10px 0 10px;
+    background-color: #fff;
+  }
+
+.redes {
+    display:grid;
+    grid-template-columns:repeat(5, 35px);
+    gap: 5px;
+  }
+
+  .boton {
+    background-color: #ff8b76;
+    transition: all 0.7s ease;
+    height: 35px;
+
+  }
+
+  .boton:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+  }
+
+.facebook {
+      background-image: url(../../../assets/facebook.png);
+      background-size:18px;
+      background-position: center;
+      background-repeat: no-repeat; 
+      }
+.twitter {
+  background-image: url(../../../assets/twitter.png);
+  background-size:18px;
+  background-position: center;
+  background-repeat: no-repeat; 
+
+  }
+
+  .linkedin {
+    background-image: url(../../../assets/linkedin.png);
+      background-size:18px;
+      background-position: center;
+      background-repeat: no-repeat; 
+  }
+  .github {
+    background-image: url(../../../assets/github.png);
+      background-size:18px;
+      background-position: center;
+      background-repeat: no-repeat; 
+
+  }
+  .instagram {
+    background-image: url(../../../assets/instagram.png);
+      background-size:18px;
+      background-position: center;
+      background-repeat: no-repeat; 
+  }
+
+
+
+#logoAP {
+    width: 150px;
+    filter: invert(1)
+}
+
+@media screen and (max-width:500px) {
+    #logoAP {
+        width: 51.9px;
+        filter: invert(1)
+    }
+    
+}
