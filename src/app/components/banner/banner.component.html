@@ -1,4 +1,7 @@
 <div class="row">
-   <button type="button" class="btn btn-light"></button>
-</div>
 
+   <!-- <buttom type="button" class="btn btn-light" (click)="login()"></buttom> -->
+   <a class="btn btn-light logIn" href="/login" role="button" (click)="login()" *ngIf="!isLogged"></a>
+   <a class="btn btn-light logOut" role="button" (click)="onLogOut()" *ngIf="isLogged"></a>
+  
+</div>

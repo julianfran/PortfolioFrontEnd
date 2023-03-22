@@ -62,13 +62,8 @@
 
 
 
-#logoAP {
-    width: 150px;
-    filter: invert(1)
-}
-
 @media screen and (max-width:500px) {
-    #logoAP {
+    .logoAP {
         width: 51.9px;
         filter: invert(1)
     }
