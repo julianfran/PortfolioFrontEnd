@@ -1,26 +1,40 @@
-<div class="contenedor">
 <div class="row">
     <h1>Formación</h1>
+    <div class="col-lg-2">
+        <button type="button" routerLink="/nuevaedu" *ngIf="isLogged">+</button>
+    </div>
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
+        <dl *ngFor="let Educacion of educacion">
+            <dt>
+                <button class="btn btn-light"  *ngIf="isLogged" routerLink="/editedu/{{Educacion.id}}">
+                    <i class="bi bi-pencil-square " alt="editar educación"></i>
+                </button>
+                <button class="btn btn-danger"  *ngIf="isLogged" (click)="delete(Educacion.id)">
+                    <i class="bi bi-trash-fill" alt="borrar educacion"></i>
+                </button>
+                
+                {{Educacion.nombreE}}
+            </dt>
+            <dd>{{Educacion.descripcionE}}</dd>
+        </dl>
+    <!-- <ul>
+        <li>
+            <h1>{{Experiencia.nombreE}}</h1> - <h3>(years)</h3>
+        </li>
+        <p>{{Experiencia}}</p>
+    </ul>
     <ul>
         <li>
-            <h1>Formación 1</h1> - <h3>(years)</h3>
+            <h1>Trabajo 2</h1> - <h3>(years)</h3>
         </li>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur nihil qui dicta dolor nobis aperiam id temporibus reiciendis fuga illo, repellat corrupti libero. Voluptatem vitae eum quasi sint neque.</p>
     </ul>
     <ul>
         <li>
-            <h1>Formación 2</h1> - <h3>(years)</h3>
+            <h1>Trabajo 3</h1> - <h3>(years)</h3>
         </li>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur nihil qui dicta dolor nobis aperiam id temporibus reiciendis fuga illo, repellat corrupti libero. Voluptatem vitae eum quasi sint neque.</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>Formación 3</h1> - <h3>(years)</h3>
-        </li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur nihil qui dicta dolor nobis aperiam id temporibus reiciendis fuga illo, repellat corrupti libero. Voluptatem vitae eum quasi sint neque.</p>
-    </ul>
-</div>
+    </ul> -->
 </div>
 </div>

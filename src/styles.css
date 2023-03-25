@@ -24,3 +24,8 @@ body {
   @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+.logoAP {
+    width: 150px;
+    filter: invert(1)
+}

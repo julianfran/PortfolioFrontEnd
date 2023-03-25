@@ -21,9 +21,15 @@
 .btn {
     width:40px;
     height: 40px;
-    background-image: url(../../../assets/usuario.png);
-    background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
     margin:0px;
+}
+.logIn{
+    background-image: url(../../../assets/usuario.png);
+    background-size: 40%;
+}
+.logOut{
+    background-image: url(../../../assets/logout.png);
+    background-size: 55%;
 }
