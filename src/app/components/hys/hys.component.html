@@ -1,13 +1,17 @@
 <div class="contenedor">
 <div class="row">
-    <h1>Hard & Soft skills</h1>
-    <div class="clo-sm-4 col-md-4 col-lg-4 text-center">
+    <h2>Hard & Soft skills</h2>
+    <button type="button" class="btn btn-light" routerLink="/newskill" *ngIf="isLogged">+</button>
+    <div class="clo-sm-4 col-md-4 col-lg-4 text-center" *ngFor="let skill of skill">
         <circle-progress
-        [percent]="80"
+        [percent]="(skill.porcentaje)"
         [radius]="90"
         [showUnits]="false"
-        [imageSrc]="'../assets/hys/html.png'"
+        [imageSrc]="''"
+        [title]="(skill.nombre)"
         [showImage]="true"
+        [showSubtitle]="false"
+        [showImage]="false"
         [imageHeight]="60"
         [imageWidth]="60"
         [outerStrokeWidth]="16"
@@ -21,111 +25,10 @@
         [backgroundPadding]="10"
         
     ></circle-progress>
-</div>
-<div class="clo-sm-4 col-md-4 col-lg-4 text-center">
-    <circle-progress
-    [percent]="75"
-    [radius]="90"
-    [showUnits]="false"
-    [imageSrc]="'../assets/hys/html.png'"
-    [showImage]="true"
-    [imageHeight]="60"
-    [imageWidth]="60"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="0"
-    [outerStrokeColor]="'#008f95'"
-    [innerStrokeColor]="'#008f95'"
-    [animation]="true"
-    [animationDuration]="600"
-    [showBackground]="true"
-    [backgroundColor]="'#ffffff'"
-    [backgroundPadding]="10"
-    
-></circle-progress>
-</div>
-<div class="clo-sm-4 col-md-4 col-lg-4 text-center">
-    <circle-progress
-    [percent]="40"
-    [radius]="90"
-    [showUnits]="false"
-    [imageSrc]="'../assets/hys/html.png'"
-    [showImage]="true"
-    [imageHeight]="60"
-    [imageWidth]="60"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="0"
-    [outerStrokeColor]="'#008f95'"
-    [innerStrokeColor]="'#008f95'"
-    [animation]="true"
-    [animationDuration]="600"
-    [showBackground]="true"
-    [backgroundColor]="'#ffffff'"
-    [backgroundPadding]="10"
-    
-></circle-progress>
-</div>
-<div class="clo-sm-4 col-md-4 col-lg-4 text-center">
-    <circle-progress
-    [percent]="60"
-    [radius]="90"
-    [showUnits]="false"
-    [imageSrc]="'../assets/hys/html.png'"
-    [showImage]="true"
-    [imageHeight]="60"
-    [imageWidth]="60"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="0"
-    [outerStrokeColor]="'#008f95'"
-    [innerStrokeColor]="'#008f95'"
-    [animation]="true"
-    [animationDuration]="600"
-    [showBackground]="true"
-    [backgroundColor]="'#ffffff'"
-    [backgroundPadding]="10"
-    
-></circle-progress>
-</div>
-<div class="clo-sm-4 col-md-4 col-lg-4 text-center">
-    <circle-progress
-    [percent]="95"
-    [radius]="90"
-    [showUnits]="false"
-    [imageSrc]="'../assets/hys/html.png'"
-    [showImage]="true"
-    [imageHeight]="60"
-    [imageWidth]="60"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="0"
-    [outerStrokeColor]="'#008f95'"
-    [innerStrokeColor]="'#008f95'"
-    [animation]="true"
-    [animationDuration]="600"
-    [showBackground]="true"
-    [backgroundColor]="'#ffffff'"
-    [backgroundPadding]="10"
-    
-></circle-progress>
-</div>
-<div class="clo-sm-4 col-md-4 col-lg-4 text-center">
-    <circle-progress
-    [percent]="90"
-    [radius]="90"
-    [showUnits]="false"
-    [imageSrc]="'../assets/hys/html.png'"
-    [showImage]="true"
-    [imageHeight]="60"
-    [imageWidth]="60"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="0"
-    [outerStrokeColor]="'#008f95'"
-    [innerStrokeColor]="'#008f95'"
-    [animation]="true"
-    [animationDuration]="600"
-    [showBackground]="true"
-    [backgroundColor]="'#ffffff'"
-    [backgroundPadding]="10"
-    
-></circle-progress>
+    <div *ngIf="isLogged">
+        <button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square " alt="editar skill"></i></button>
+        <button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-trash-fill" alt="borrar skill"></i></button>
+    </div>
 </div>
 </div>
 </div>
