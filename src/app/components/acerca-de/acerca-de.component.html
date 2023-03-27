@@ -1,27 +1,15 @@
-<!-- <div class="contenedor">
-    <div class="caja1">
-        <h1>Acerca de mí</h1>
-        <h2>Julián Franco</h2>
-        <img src="../../../assets/photoPerfil.jpg" class="img-fluid" id="fotoDePerfil">
-        <h3>Full Stack Developer Jr</h3>
-    </div>
-    <div class="caja2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatibus sunt perspiciatis incidunt eos temporibus. Nobis, sapiente repudiandae totam delectus voluptate mollitia quibusdam et quae officia accusantium, minus qui eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatibus sunt perspiciatis incidunt eos temporibus. Nobis, sapiente repudiandae totam delectus voluptate mollitia quibusdam et quae officia accusantium, minus qui eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatibus sunt perspiciatis incidunt eos temporibus. Nobis, sapiente repudiandae totam delectus voluptate mollitia quibusdam et quae officia accusantium, minus qui eaque.</p>
-    </div>
-</div>
-    
-     -->
-    <div class="row">
+<div class="row">
     <div class="col-xs-12 col-md-12 col-lg-12">
-        <h1>Acerca de mí</h1>
+        <h2>Acerca de mí</h2>
+        <button class="btn btn-light"  *ngIf="isLogged" routerLink="/editacercade/1">
+            <i class="bi bi-pencil-square " alt="editar persona"></i>
+        </button>
     </div>
      <div class="col-xs-12 col-md-12 col-lg-12">
         <h2>{{persona.nombre}} {{persona.apellido}}</h2>
     </div>
     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 centrado">
-        <img src="../../../assets/photoPerfil.jpg" class="img-fluid" id="fotoDePerfil">
+        <img src={{persona.img}} class="img-fluid" id="fotoDePerfil">
             <h3>Full Stack Developer Jr</h3>
     </div>
     
