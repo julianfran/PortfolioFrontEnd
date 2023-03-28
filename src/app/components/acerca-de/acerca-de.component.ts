@@ -11,9 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class AcercaDeComponent implements OnInit {
   persona: Persona = null;
 
-  constructor(public personaService: PersonaService, private tokenService: TokenService) {
-
-  }
+  constructor(public personaService: PersonaService, private tokenService: TokenService) {}
   
   isLogged = false;
 
