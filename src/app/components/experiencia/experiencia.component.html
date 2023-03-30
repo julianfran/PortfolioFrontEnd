@@ -1,42 +1,38 @@
 <div class="row">
-    <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
-        <button type="button" routerLink="/nuevaexp" *ngIf="isLogged">+</button>
+    <div class="titulosSecciones">
+        <h2>Experiencia laboral</h2>
+        <div>
+            <button class="btn btn-success btn-Edit" type="button" routerLink="/nuevaexp" *ngIf="isLogged"><i
+                    class="bi bi-plus-lg"></i></button>
+        </div>
     </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
+    <!-- <div>
         <dl *ngFor="let Experiencia of expe">
-            <dt>
-                <button class="btn btn-light"  *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">
+            <dt><i class="bi bi-briefcase-fill biList"></i>{{Experiencia.nombreE}}
+                <button class="btn btn-light btn-Edit" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">
                     <i class="bi bi-pencil-square " alt="editar experiencia"></i>
                 </button>
-                <button class="btn btn-danger"  *ngIf="isLogged" (click)="delete(Experiencia.id)">
+                <button class="btn btn-danger btn-Edit" *ngIf="isLogged" (click)="delete(Experiencia.id)">
                     <i class="bi bi-trash-fill" alt="borrar experiencia"></i>
                 </button>
-                
-                {{Experiencia.nombreE}}
             </dt>
             <dd>{{Experiencia.descripcionE}}</dd>
         </dl>
-    <!-- <ul>
-        <li>
-            <h1>{{Experiencia.nombreE}}</h1> - <h3>(years)</h3>
-        </li>
-        <p>{{Experiencia}}</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>Trabajo 2</h1> - <h3>(years)</h3>
-        </li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur nihil qui dicta dolor nobis aperiam id temporibus reiciendis fuga illo, repellat corrupti libero. Voluptatem vitae eum quasi sint neque.</p>
-    </ul>
-    <ul>
-        <li>
-            <h1>Trabajo 3</h1> - <h3>(years)</h3>
-        </li>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur nihil qui dicta dolor nobis aperiam id temporibus reiciendis fuga illo, repellat corrupti libero. Voluptatem vitae eum quasi sint neque.</p>
-    </ul> -->
+    </div> -->
+    <div class="card" style="width: 18rem;" *ngFor="let Experiencia of expe">
+        <img src="../../../assets/briefcase.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{Experiencia.nombreE}}</h5>
+            <p class="card-text">{{Experiencia.descripcionE}}</p>
+            <div class="btns">
+                <button class="btn btn-warning btn-Edit" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">
+                    <i class="bi bi-pencil-square " alt="editar experiencia"></i>
+                </button>
+                <button class="btn btn-danger btn-Edit" *ngIf="isLogged" (click)="delete(Experiencia.id)">
+                    <i class="bi bi-trash-fill" alt="borrar experiencia"></i>
+                </button>
+            </div>
+        </div>
+        
+    </div>
 </div>
-</div>
-
-

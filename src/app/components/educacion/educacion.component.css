@@ -1,11 +1,7 @@
-.contenedor {
-    background-color: #ffcc51
-    ;
-}
 .row {
     padding:55px 20px 20px 20px;
     background-color: #24e0b8;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 8%);
+    /* clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 8%); */
     margin-right: 0;
     margin-left: 0;
 }

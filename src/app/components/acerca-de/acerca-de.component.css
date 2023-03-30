@@ -4,17 +4,12 @@
     margin-left: 0;
     background-color: #fff;
 }
-
-h1 {
-    font-size: 1.7em;
-    color: #ff3031;
-    font-family: "bebasneue";
-}
 h2 {
     font-size: 3em;
     color: #007b00;
     font-family: "Poiret One";
     font-weight: bold;
+    text-align: left;
 }
 h3 {
     color:#ff3031;
@@ -22,7 +17,7 @@ h3 {
     /* text-shadow: 1px 1px 1px #212529 */
 }
 p {
-    font-size: 1.2em;
+    font-size: 1.4rem;
 }
 .centrado {
     text-align: center;
@@ -38,3 +33,10 @@ p {
     left: 2%;
     margin:5px
 }
+.acercaDe{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
+    align-items: center;
+  }

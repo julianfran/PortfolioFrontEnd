@@ -1,13 +1,48 @@
 .row {
-    padding:20px;
+    padding:50px 20px 40px 20px;
     background-color: #ffcc51;
-    clip-path: polygon(0 4%, 25% 11%, 68% 3%, 100% 9%, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 4%, 25% 11%, 68% 3%, 100% 9%, 100% 100%, 0 100%); */
+    box-shadow: 0px 0px 10px 5px #00000052;
     margin-right: 0;
     margin-left: 0;
     padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:30px
 }
-
-h1,h3 {
-    display: inline;
+.biList{
+    font-size: 1.5rem !important;
+    margin-right: 8px !important;
 }
+.card{
+    box-shadow: 1px 1px 10px #00000077;
+    margin-top: 35px;
+}
+.card img{
+    width: 100px !important;
+    position: relative !important;
+    bottom: 50px;
+    margin: auto
+}
+.card-body{
+    position: relative !important;
+    bottom: 45px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap:10px;
+    margin-bottom: -60px;
 
+}
+.card-title {
+    text-align: center;
+    font-weight: bold;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+}
