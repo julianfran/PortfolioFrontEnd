@@ -1,11 +1,15 @@
-
 <div class="row">
+    <div class="acercaDe" *ngIf="!backListo; else mostrar">
+        <span class="placeholder col-2"></span>
+    </div>
+   <ng-template #mostrar>
     <div class="acercaDe">
         <h3 class="tituloRojo">Acerca de mí</h3>
         <button class="btn btn-warning btn-Edit" *ngIf="isLogged" routerLink="/editacercade/1">
             <i class="bi bi-pencil-square " alt="editar persona"></i>
         </button>
     </div>
+   </ng-template>   
     <div class="col-xs-12 col-md-12 col-lg-12">
         <h2 class="tituloVerde">{{persona.nombre}} {{persona.apellido}}</h2>
     </div>
@@ -15,7 +19,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <p>{{persona.descripcion}}</p>
+        <p>{{persona.descripcion}} {{backListo}}</p>
     </div>
 
 

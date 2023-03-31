@@ -20,9 +20,9 @@
     margin-top: 35px;
 }
 .card img{
-    width: 100px !important;
+    width: 80px !important;
     position: relative !important;
-    bottom: 50px;
+    bottom: 45px;
     margin: auto
 }
 .card-body{
