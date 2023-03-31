@@ -16,11 +16,7 @@ export class AcercaDeComponent implements OnInit {
   constructor(public personaService: PersonaService, private tokenService: TokenService) {}
   
   isLogged = false;
-
-
-  
-
-  
+ 
   get backListo(): boolean{
     return !!this.persona.descripcion;
   }
@@ -40,10 +36,6 @@ export class AcercaDeComponent implements OnInit {
     this.personaService.detail(1).subscribe(data=>{
       this.persona = data;
     })
-  }
- 
-  get URL(){
-    return this.personaService.URL;
   }
 
 }
