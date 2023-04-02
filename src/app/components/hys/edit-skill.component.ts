@@ -38,8 +38,8 @@ export class EditSkillComponent implements OnInit {
   }
 
   uploadImage($event:any){
-    const id = this.activatedRouter.snapshot.params['id'];
-    const name = "skill_" + id;
-    this.imageService.uploadImage($event, name)
+    // const id = this.activatedRouter.snapshot.params['id'];
+    // const name = "skill_" + id;
+    this.imageService.uploadImage($event)
   }
 }

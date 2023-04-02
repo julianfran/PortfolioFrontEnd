@@ -1,17 +1,21 @@
-<div class="contenedor">
 <div class="row">
-    <h2>Hard & Soft skills</h2>
-    <button type="button" class="btn btn-light" routerLink="/newskill" *ngIf="isLogged">+</button>
+    <div class="titulosSecciones">
+        <h2>Hard & Soft Skills</h2>
+        <div>
+            <button class="btn btn-success btn-Edit" type="button" routerLink="/newskill" *ngIf="isLogged"><i
+                    class="bi bi-plus-lg"></i></button>
+        </div>
+    </div>
     <div class="clo-sm-4 col-md-4 col-lg-4 text-center" *ngFor="let skill of skill">
         <circle-progress
         [percent]="(skill.porcentaje)"
         [radius]="90"
         [showUnits]="false"
         [imageSrc]="(skill.img)"
-        [title]="''"
+        [title]="(skill.nombre)"
         [showImage]="true"
+        [showTitle]="true"
         [showSubtitle]="false"
-        [showImage]="false"
         [imageHeight]="60"
         [imageWidth]="60"
         [outerStrokeWidth]="16"
@@ -29,6 +33,5 @@
         <button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square " alt="editar skill"></i></button>
         <button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-trash-fill" alt="borrar skill"></i></button>
     </div>
-</div>
 </div>
 </div>

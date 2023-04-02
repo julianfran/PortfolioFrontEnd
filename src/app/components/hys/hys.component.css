@@ -1,10 +1,17 @@
 .contenedor {
     background-color: #24e0b8;
 }
+h2{
+    margin-bottom: 50px;
+}
 .row {
     background-color: #ff8b76;
     clip-path: polygon(50% 4%, 100% 0, 100% 100%, 0 100%, 0 0);
     padding: 55px 20px 20px 20px;
     margin-right: 0;
     margin-left: 0;
+    padding: 60px 20px 50px 20px 
+}
+circle-progress image{
+    filter:grayscale(1) !important
 }
