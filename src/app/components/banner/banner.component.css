@@ -1,5 +1,5 @@
 .row {
-    background-image: linear-gradient(to right,rgba(0, 123, 0, 0.5),rgba(255, 48, 49, 0.5)),
+    background-image: linear-gradient(to right,#007b0080,rgba(255, 48, 49, 0.5)),
                   url("../../../assets/banner7.jpg");
     clip-path: polygon(0 0, 100% 0, 100% 100%,0 85%);
     height:550px;

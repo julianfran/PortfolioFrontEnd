@@ -26,10 +26,16 @@
     padding: 20px;
 }
 .cardProyecto:hover{
-transform: scale(1.05);
-transition: linear 0.2s;
+transform: scale(1.03);
+transition: linear 0.5s;
 }
 .logoCard{
     width: 100%;
     z-index: 1;
+}
+.git{
+    background-color: #ff8b76;
+}
+.web{
+    background-color: #ffcc51;
 }
