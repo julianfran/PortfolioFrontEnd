@@ -17,8 +17,6 @@
     width: 300px;
     height: 200px;
     border-radius:10px;
-    background-color: rgb(230, 230, 230);
-    box-shadow: 1px 1px 5px #0000007a;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -26,12 +24,12 @@
     padding: 20px;
 }
 .cardProyecto:hover{
-transform: scale(1.03);
-transition: linear 0.5s;
+transform: scale(1.02);
+transition: linear 0.2s;
 }
 .logoCard{
     width: 100%;
-    z-index: 1;
+    filter: grayscale(1)
 }
 .git{
     background-color: #ff8b76;

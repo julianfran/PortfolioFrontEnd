@@ -27,6 +27,8 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
 
 
 
@@ -51,6 +53,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     NewSkillComponent,
     EditSkillComponent,
     EditAcercaDeComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
   ],
   imports: [
     BrowserModule,
