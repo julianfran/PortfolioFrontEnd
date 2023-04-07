@@ -14,7 +14,6 @@ export class NewProyectoComponent implements OnInit {
   nombre: string;
   descripcion: string;
   logo: string;
-  imgFondo: string;
   enlaceGit: string;
   enlaceWeb: string;
 
@@ -27,7 +26,7 @@ export class NewProyectoComponent implements OnInit {
 
 
   onCreate() {
-    this.logo = "juanito"
+    this.logo = this.imageService.url
     const proy = new Proyecto(this.nombre, this.descripcion, this.logo, this.enlaceGit, this.enlaceWeb);
     this.proyectoS.save(proy).subscribe(data => {
       alert("Proyecto creado");
