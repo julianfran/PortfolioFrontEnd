@@ -1,4 +1,29 @@
-<div class="row">
+<!-- Cargando componente -->
+<div class="row" style="margin-bottom: -10px" *ngIf="loading">
+    <div class="titulosSecciones">
+        <h2>Formación</h2>
+    </div>
+    <div>
+        <div class="cont">
+
+            <div class="listaEdu" style="justify-content: center; width: 100%">
+                <p class="placeholder-glow" >
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-10 mb-2"></span>
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-10 mb-2"></span>
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-10 mb-2"></span>
+                    <span class="placeholder col-12"></span>
+                    <span class="placeholder col-10 mb-2"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Componente cargada -->
+<div class="row" *ngIf="!loading">
     <div class="titulosSecciones">
         <h2>Formación</h2>
         <div>

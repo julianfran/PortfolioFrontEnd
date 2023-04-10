@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/services/s-experiencia.service';
 import { TokenService } from 'src/app/services/token.service';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-experiencia',
@@ -9,9 +10,11 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit{
-  expe: Experiencia[] = [];
-   
-  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService){}
+  public expe: Experiencia[] = [];
+  public loading: boolean;
+  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService){
+    this.loading = true
+  }
 
   isLogged = false;
 
@@ -26,8 +29,14 @@ export class ExperienciaComponent implements OnInit{
     
   }
 
-  cargarExperiencia():void{
-    this.sExperiencia.lista().subscribe(data => {this.expe = data})
+  cargarExperiencia(): void{
+    const listarExperiencia = this.sExperiencia.lista()
+    .pipe(finalize(()=>{
+      this.loading = false;
+    }))
+    .subscribe(data=>{
+      this.expe = data;
+    })
   }
 
   delete(id?: number){

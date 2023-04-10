@@ -15,7 +15,9 @@ h1,
 h3 {
     display: inline;
 }
-
+p{
+    width: 60%;
+}
 .cont {
     display: flex;
     flex-direction: column;

@@ -1,4 +1,33 @@
-<div class="row">
+<!-- Cargando skills -->
+<div class="contenedor">
+<div class="row" *ngIf="loading">
+    <div class="titulosSecciones">
+        <h2>Hard & Soft Skills</h2>
+    </div>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+    <p class="placeholder-wave">
+        <span class="placeholder circulo"></span>
+    </p>
+
+   
+</div>
+
+<!-- skills cargadas -->
+<div class="row" *ngIf="!loading">
     <div class="titulosSecciones">
         <h2>Hard & Soft Skills</h2>
         <div>
@@ -33,5 +62,6 @@
         <button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square " alt="editar skill"></i></button>
         <button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-trash-fill" alt="borrar skill"></i></button>
     </div>
+</div>
 </div>
 </div>

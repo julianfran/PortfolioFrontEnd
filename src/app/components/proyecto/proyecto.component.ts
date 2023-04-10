@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/services/proyecto.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -11,8 +12,10 @@ import { TokenService } from 'src/app/services/token.service';
 export class ProyectoComponent implements OnInit {
 
 proy: Proyecto[] = [];
-
-constructor(private proyectoS: ProyectoService, private tokenService: TokenService){}
+public loading: boolean;
+constructor(private proyectoS: ProyectoService, private tokenService: TokenService){
+  this.loading = true;
+}
 
 isLogged = false;
 
@@ -27,7 +30,11 @@ ngOnInit(): void {
 }
 
 cargarProyectoS(): void{
-  this.proyectoS.lista().subscribe(data=>{
+  const listarProyectos = this.proyectoS.lista()
+  .pipe(finalize(()=>{
+    this.loading = false;
+  }))
+  .subscribe(data=>{
     this.proy = data
   })
 }

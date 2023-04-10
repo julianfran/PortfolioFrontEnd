@@ -1,4 +1,56 @@
-<div class="row">
+<div class="row"  *ngIf="loading">
+    <div class="titulosSecciones">
+        <h2>Experiencia laboral</h2>
+    </div>
+<!-- Tarjetas "cargando" -->
+    <div class="card" style="width: 18rem" aria-hidden="true">
+        <img src="../../../assets/briefcase.png" class="card-img-top placeholder-glow" alt="...">
+        <div class="card-body">
+            <h5 class="card-title placeholder-wave todoElAncho">
+                <span class="placeholder col-12"></span>
+            </h5>
+            <p class="card-text placeholder-glow todoElAncho">
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-8 mt-1 mb-4"></span>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="card" style="width: 18rem" aria-hidden="true">
+        <img src="../../../assets/briefcase.png" class="card-img-top placeholder-glow" alt="...">
+        <div class="card-body">
+            <h5 class="card-title placeholder-wave todoElAncho">
+                <span class="placeholder col-12"></span>
+            </h5>
+            <p class="card-text placeholder-glow todoElAncho">
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-8 mt-1 mb-4"></span>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="card" style="width: 18rem" aria-hidden="true">
+        <img src="../../../assets/briefcase.png" class="card-img-top placeholder-glow" alt="...">
+        <div class="card-body">
+            <h5 class="card-title placeholder-wave todoElAncho">
+                <span class="placeholder col-12"></span>
+            </h5>
+            <p class="card-text placeholder-glow todoElAncho">
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-10"></span>
+                <span class="placeholder col-8 mt-1 mb-4"></span>
+            </p>
+        </div>
+        
+    </div>
+
+</div>
+<!-- Tarjeta cargada -->
+<div class="row" *ngIf="!loading">
     <div class="titulosSecciones">
         <h2>Experiencia laboral</h2>
         <div>
@@ -6,19 +58,10 @@
                     class="bi bi-plus-lg"></i></button>
         </div>
     </div>
-    <!-- <div>
-        <dl *ngFor="let Experiencia of expe">
-            <dt><i class="bi bi-briefcase-fill biList"></i>{{Experiencia.nombreE}}
-                <button class="btn btn-light btn-Edit" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}">
-                    <i class="bi bi-pencil-square " alt="editar experiencia"></i>
-                </button>
-                <button class="btn btn-danger btn-Edit" *ngIf="isLogged" (click)="delete(Experiencia.id)">
-                    <i class="bi bi-trash-fill" alt="borrar experiencia"></i>
-                </button>
-            </dt>
-            <dd>{{Experiencia.descripcionE}}</dd>
-        </dl>
-    </div> -->
+
+
+
+
     <div class="card" style="width: 18rem;" *ngFor="let Experiencia of expe">
         <img src="../../../assets/briefcase.png" class="card-img-top" alt="...">
         <div class="card-body">

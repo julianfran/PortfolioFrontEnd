@@ -1,8 +1,14 @@
+
 .row {
     background-color: #fff;
     padding: 20px;
     margin-right: 0;
     margin-left: 0;
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    margin-top: 35px;
 }
 .contenedor {
     width:auto;
@@ -19,6 +25,7 @@
     border-radius:10px;
     background-size: cover;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -36,4 +43,16 @@ transition: linear 0.2s;
 }
 .web{
     background-color: #ffcc51;
+}
+.todoElAncho{
+    width: 100%;
+}
+.circulo{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.rectangulo{
+    width: 150px;
+    height: 80px;
 }

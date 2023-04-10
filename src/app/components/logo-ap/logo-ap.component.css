@@ -7,10 +7,24 @@
     padding: 0 10px 0 10px;
     background-color: #fff;
   }
+  .logoAP {
+    width: 60px;
+}
+h1{
+  font-family: 'bebasneue';
+  margin: 0 !important;
+  font-size: 2rem;
+}
+.logoYTitulo{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  align-items: center;
 
+}
 .redes {
     display:grid;
-    grid-template-columns:repeat(5, 35px);
+    grid-template-columns:repeat(2, 35px);
     gap: 5px;
   }
 
@@ -65,7 +79,6 @@
 @media screen and (max-width:500px) {
     .logoAP {
         width: 51.9px;
-        filter: invert(1)
     }
     
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs';
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/services/skill.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -10,8 +11,10 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class HysComponent implements OnInit {
   skill: Skill[] = [];
-
-  constructor(private skillS: SkillService, private tokenService: TokenService){}
+  public loading: boolean;
+  constructor(private skillS: SkillService, private tokenService: TokenService){
+    this.loading = true;
+  }
 
   isLogged = false;
 
@@ -26,7 +29,11 @@ export class HysComponent implements OnInit {
   }
 
   cargarSkills(): void{
-    this.skillS.lista().subscribe(data=>{
+    const listarSkills = this.skillS.lista()
+    .pipe(finalize(()=>{
+      this.loading = false;
+    }))
+    .subscribe(data=>{
       this.skill = data
       alert
     })

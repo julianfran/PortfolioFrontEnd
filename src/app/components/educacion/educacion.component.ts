@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -10,8 +11,10 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
-
-  constructor(private educacionS: EducacionService, private tokenService: TokenService){}
+  public loading: boolean;
+  constructor(private educacionS: EducacionService, private tokenService: TokenService){
+    this.loading = true
+  }
 
   isLogged = false;
 
@@ -26,7 +29,11 @@ export class EducacionComponent implements OnInit {
   }
 
   cargarEducacion(): void{
-    this.educacionS.lista().subscribe(data=>{
+    const listarEducacion = this.educacionS.lista()
+    .pipe(finalize(()=>{
+      this.loading = false;
+    }))
+    .subscribe(data=>{
       this.educacion = data;
     })
   }

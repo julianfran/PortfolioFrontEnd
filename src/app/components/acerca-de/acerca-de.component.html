@@ -1,25 +1,61 @@
-<div class="row">
-    <div class="acercaDe" *ngIf="!backListo; else mostrar">
-        <span class="placeholder col-2"></span>
+<div class="loading" *ngIf="loading">
+
+    <p class="placeholder-glow todoElAncho acercaDe">
+        <span class="placeholder" style="width:30%"></span>
+    </p>
+    <div class="tituloYDescripcion">
+        <div class="colIzq">
+            <p class="placeholder-wave titulo">
+                <span class="placeholder me-2" style="width: 45%"></span>
+                <span class="placeholder" style="width: 45%"></span>
+            </p>
+            <p class="placeholder-glow imagenPerfil">
+                <span class="placeholder fotoDePerfil"></span>
+            </p>
+             <p class="placeholder-glow subtitulo">
+                <span class="placeholder" style="width: 80%"></span>
+            </p>
+        </div>
+        <p class="placeholder-glow descripcion">
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+            <span class="placeholder todoElAncho"></span>
+        </p>
     </div>
-   <ng-template #mostrar>
+   
+   
+</div>
+
+
+
+
+<div class="row" *ngIf="!loading">
     <div class="acercaDe">
-        <h3 class="tituloRojo">Acerca de mí</h3>
+
+        <h3 class="tituloRojo" *ngIf="!loading">Acerca de mí</h3>
         <button class="btn btn-warning btn-Edit" *ngIf="isLogged" routerLink="/editacercade/1">
             <i class="bi bi-pencil-square " alt="editar persona"></i>
         </button>
     </div>
-   </ng-template>   
+
     <div class="col-xs-12 col-md-12 col-lg-12">
         <h2 class="tituloVerde">{{persona.nombre}} {{persona.apellido}}</h2>
     </div>
     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 centrado">
-        <img [src]="persona.img" class="img-fluid" id="fotoDePerfil">
+        <img [src]="persona.img" class="img-fluid fotoDePerfil2">
+
         <h3 class="tituloRojo">Full Stack Developer Jr</h3>
     </div>
-
     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-        <p>{{persona.descripcion}} {{backListo}}</p>
+        <p>{{persona.descripcion}}</p>
     </div>
 
 

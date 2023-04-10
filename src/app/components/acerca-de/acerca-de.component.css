@@ -26,7 +26,15 @@ p {
     text-align: justify;
 }
 
-#fotoDePerfil{
+.fotoDePerfil{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 2%;
+    margin:5px
+}
+.fotoDePerfil2{
     width: 80%;
     border-radius: 100%;
     box-shadow: 3px 3px 3px grey;
@@ -40,3 +48,38 @@ p {
     flex-wrap: nowrap;
     align-items: center;
   }
+.loading{
+    padding: 20px;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.acercaDe{
+    flex-grow: 1;
+}
+.tituloYDescripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.colIzq{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.todoElAncho{
+    width: 100%;
+}
+.descripcion{
+    width: 850px;
+    flex-grow: 1;
+
+}

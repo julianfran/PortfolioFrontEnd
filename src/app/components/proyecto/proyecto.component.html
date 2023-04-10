@@ -1,12 +1,54 @@
-<div class="row">
+<!-- Cargando componente -->
+<div class="row" *ngIf="loading">
   <div class="titulosSecciones">
-    <h2>Proyectos</h2>
+    <h2 class="titulo">Proyectos</h2>
+  </div>
+  <!-- Modal -->
+
+  <div class="contenedor">
+    <div class="cardProyecto">
+      <p class="placeholder-wave todoElAncho">
+        <span class="placeholder circulo"></span>
+      </p>
+      <p class="placeholder-glow todoElAncho">
+        <span class="placeholder rectangulo"></span>
+      </p>
+    </div>
+    <div class="cardProyecto">
+      <p class="placeholder-wave todoElAncho">
+        <span class="placeholder circulo"></span>
+      </p>
+      <p class="placeholder-glow todoElAncho">
+        <span class="placeholder rectangulo"></span>
+      </p>
+    </div>
+    <div class="cardProyecto">
+      <p class="placeholder-wave todoElAncho">
+        <span class="placeholder circulo"></span>
+      </p>
+      <p class="placeholder-glow todoElAncho">
+        <span class="placeholder rectangulo"></span>
+      </p>
+    </div>
+  </div>
+  
+
+
+</div>
+
+
+
+<!-- Componente cargado -->
+<div class="row" *ngIf="!loading">
+  <div class="titulosSecciones">
+    <h2 class="titulo">Proyectos</h2>
     <div>
         <button class="btn btn-success btn-Edit" type="button" routerLink="/newproyecto" *ngIf="isLogged"><i
                 class="bi bi-plus-lg"></i></button>
     </div>
 </div>
-  
+    
+
   <div class="contenedor" *ngFor="let Proyecto of proy">
     <div class="cardProyecto" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <img class="logoCard" [src]="Proyecto.logo">
@@ -15,7 +57,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title fs-5" id="exampleModalLabel">{{Proyecto.nombre}}</h2>
+            <h2 class="modal-title fs-5" id="exampleModalLabel">Proyecto:</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -23,10 +65,10 @@
             <p>{{Proyecto.descripcion}}</p>
           </div>
           <div class="modal-footer">
-            <a role="button" class="btn git" data-bs-dismiss="modal" [href]="Proyecto.enlaceGit">
+            <a role="button" class="btn git" data-bs-dismiss="modal" [href]="Proyecto.enlaceGit" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-github"></i>
             </a>
-            <a role="button" class="btn web" [href]="Proyecto.enlaceWeb">
+            <a role="button" class="btn web" [href]="Proyecto.enlaceWeb" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-box-arrow-up-right"></i>
             </a>
           </div>
@@ -36,6 +78,5 @@
 
   </div>
 
-  <!-- Modal -->
 
 </div>

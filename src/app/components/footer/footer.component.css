@@ -1,23 +1,24 @@
-h1 {
-    color: #24e0b8;
-    font-size: 1.5em;
 
-}
 h2 {
     color: #ffcc51;
     font-size: 1.2em;
 }
 h3 {
-    color:#fff;
+    color:#000;
     font-size: 1em;
 }
+a{
+    color:blue;
+    text-decoration: none;
+}
 .contenedor {
-    background-color:#007b00;
+    background-color:#ffcc51;
     display: flex;
     justify-content:space-between;
     align-content: center;
     flex-flow: row wrap;
     padding: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.568);
 }
 
 @media (max-width:425px) {
@@ -27,7 +28,7 @@ h3 {
 
 }
 .caja1 {
-    color: #fff;
+    color: #000;
     font-size: 1.1em;
 }
 
@@ -40,7 +41,7 @@ h3 {
     
 .caja2 {
     width: 200px;
-    color: #fff;
+    color: #000;
     text-align: right
 }
 @media (max-width:425px) {
