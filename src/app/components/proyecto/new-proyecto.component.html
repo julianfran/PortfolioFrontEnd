@@ -7,12 +7,13 @@
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required="">
                     <label for="descripcion">Descripcion</label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" required="">
-                    <label for="logo">Logo</label>
-                    <input type="file" class="form-control" id="logo" name="logo" [(ngModel)]="logo" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
                     <label for="enlaceGit">Enlace de repositorio Git</label>
                     <input type="text" class="form-control" id="enlaceGit" name="enlaceGit" [(ngModel)]="enlaceGit" required="">
                     <label for="enlaceWeb">Enlace de la web del proyecto</label>
                     <input type="text" class="form-control" id="enlaceWeb" name="enlaceWeb" [(ngModel)]="enlaceWeb" required="">
+                    <label for="logo">Logo</label>
+                    <input type="file" class="form-control" id="logo" name="logo" [(ngModel)]="logo" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    
                 </div>
                     <button class=""btn btn-primary>Agregar</button>
             </form>

@@ -49,11 +49,15 @@
 </div>
     
 
-  <div class="contenedor" *ngFor="let Proyecto of proy">
-    <div class="cardProyecto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="contenedor" *ngFor="let Proyecto of proyecto" >
+    <div class="cardProyecto" data-bs-toggle="modal" [attr.data-bs-target]="'#proyecto' + Proyecto.id">
       <img class="logoCard" [src]="Proyecto.logo">
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/editproyecto/{{Proyecto.id}}"><i class="bi bi-pencil-square " alt="editar proyecto"></i></button>
+      <button class="btn btn-danger" (click)="delete(Proyecto.id)"><i class="bi bi-trash-fill" alt="borrar proyecto"></i></button>
+  </div>
+    <div class="modal fade" [id]="'proyecto' + Proyecto.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -65,7 +69,7 @@
             <p>{{Proyecto.descripcion}}</p>
           </div>
           <div class="modal-footer">
-            <a role="button" class="btn git" data-bs-dismiss="modal" [href]="Proyecto.enlaceGit" target="_blank" rel="noopener noreferrer">
+            <a role="button" class="btn git" [href]="Proyecto.enlaceGit" target="_blank" rel="noopener noreferrer">
               <i class="bi bi-github"></i>
             </a>
             <a role="button" class="btn web" [href]="Proyecto.enlaceWeb" target="_blank" rel="noopener noreferrer">

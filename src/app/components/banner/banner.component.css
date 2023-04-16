@@ -16,6 +16,9 @@
     .contenedor {
         height:350px;
 
+    }
+    .row{
+        height: 450px;
     }    
 }
 .btn {

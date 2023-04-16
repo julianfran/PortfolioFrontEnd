@@ -29,14 +29,16 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    filter: grayscale(1)
 }
 .cardProyecto:hover{
 transform: scale(1.02);
 transition: linear 0.2s;
+filter: grayscale(0)
 }
 .logoCard{
     width: 100%;
-    filter: grayscale(1)
+    
 }
 .git{
     background-color: #ff8b76;

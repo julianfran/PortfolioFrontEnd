@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ProyectoComponent implements OnInit {
 
-proy: Proyecto[] = [];
+public proyecto: Proyecto[] = [];
 public loading: boolean;
 constructor(private proyectoS: ProyectoService, private tokenService: TokenService){
   this.loading = true;
@@ -35,7 +35,7 @@ cargarProyectoS(): void{
     this.loading = false;
   }))
   .subscribe(data=>{
-    this.proy = data
+    this.proyecto = data
   })
 }
 

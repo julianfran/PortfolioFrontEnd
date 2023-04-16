@@ -20,7 +20,7 @@ export class EditProyectoComponent implements OnInit {
       this.proyectoS.detail(id).subscribe(data =>{
         this.proyecto = data;
       }, err =>{
-        alert("Hubo un problema al modificar el skill");
+        alert("Hubo un problema al modificar el proyecto");
         this.router.navigate(['']);
       })
     }

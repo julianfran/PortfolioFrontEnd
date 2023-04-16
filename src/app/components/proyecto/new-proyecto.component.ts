@@ -11,11 +11,11 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
 })
 export class NewProyectoComponent implements OnInit {
   id: number;
-  nombre: string;
-  descripcion: string;
-  logo: string;
-  enlaceGit: string;
-  enlaceWeb: string;
+  nombre: string = '';
+  descripcion: string = '';
+  logo: string = '';
+  enlaceGit: string = '';
+  enlaceWeb: string = '';
 
   constructor(private proyectoS: ProyectoService, private router: Router,
     private activateRouter: ActivatedRoute, public imageService: ImageService) { }
@@ -27,8 +27,8 @@ export class NewProyectoComponent implements OnInit {
 
   onCreate() {
     this.logo = this.imageService.url
-    const proy = new Proyecto(this.nombre, this.descripcion, this.logo, this.enlaceGit, this.enlaceWeb);
-    this.proyectoS.save(proy).subscribe(data => {
+    const proyecto = new Proyecto(this.nombre, this.descripcion, this.logo, this.enlaceGit, this.enlaceWeb);
+    this.proyectoS.save(proyecto).subscribe(data => {
       alert("Proyecto creado");
       this.router.navigate(['']);
     }, err => {
